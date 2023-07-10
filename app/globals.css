@@ -3,25 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+  background-image:linear-gradient(to left, #eff2ffdb 0%, #f3f3f3c9 52%, #f9f9f9ba 100%), url("https://img.freepik.com/free-vector/cyber-security-concept_53876-93190.jpg?w=1060&t=st=1687896916~exp=1687897516~hmac=98b2bd51658e6947ca84c16c5db74e5948acb9b05ab2417bce9b514cbbc459bd");
+
+  background-position: center;
+  background-repeat: repeat-y;
+  background-size: contain;
 }
