@@ -13,7 +13,7 @@ export function Nav() {
 
                 <Link href="/" className="w-20 h-20 flex">
 
-                    <Image className=' object-scale-down' width='50' height='50' src={'/icons/logo2.png'} alt='logo' />
+                    <Image className=' object-scale-down' width='50' height='50' src={'/icons/logo.png'} alt='logo' />
 
                 </Link>
 
