@@ -1,4 +1,3 @@
-'use client'
 import React from "react";
 import Image from "next/image";
 
@@ -16,6 +15,7 @@ export function ProjectsCard(
     return (
 
         <li className=' min-w-[340px] max-w-[340px] h-[470px] mx-auto overflow-hidden cursor-pointe shadow-md rounded-2xl pb-4 bg-description-grad'>
+
             <a href={link} target="_blank">
                 <Image className='rounded-2xl w-full h-60' src={img} alt={title} width={800} height={800} />
 

@@ -32,7 +32,7 @@ export function Main(){
 
         <div className=' h-[50vh] w-screen overflow-hidden md:h-full flex items-end justify-center '>
 
-            <Image src='/Perfil2.png' width='600' height='600' className=' md:max-w-[500px] md:min-w-[460px] h-[95%] object-contain md:h-fit' alt='Personal img' />
+            <Image src='/perfil.png' width='600' height='600' className=' md:max-w-[500px] md:min-w-[460px] h-[95%] object-contain md:h-fit' alt='Personal img' />
 
         </div>
 

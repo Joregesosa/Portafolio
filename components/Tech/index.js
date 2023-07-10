@@ -35,6 +35,10 @@ const technologies = [
         title: 'Next js',
         icon: '/icons/nextjs.png'
     },
+    {
+        title: 'Tailwind',
+        icon: '/icons/tailwind.png'
+    },
 
 
 ]
