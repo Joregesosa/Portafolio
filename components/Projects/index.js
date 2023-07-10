@@ -1,12 +1,13 @@
 import React from "react";
 import Image from "next/image";
+import { ProjectsCard } from "../ProjectCard";
 
 const projects = [
     {
         img: '/projects/deskTopTipCalculator.png',
         title: 'Tip Calculator',
         description: 'Calcula la propina del total de una cuenta y distibulle el total entre la cantidad de personas que pagarn la cuenta.',
-        tehc: [
+        tech: [
             {
                 title: 'html',
                 icon: '/icons/html.png'
@@ -27,7 +28,7 @@ const projects = [
         img: '/projects/deskTopWeather.png',
         title: 'Weather App',
         description: 'El usuario puede visualizar el clima de su localidad y el pronostico de los proximos 5 dias',
-        tehc: [
+        tech: [
             {
                 title: 'nextjs',
                 icon: '/icons/nextjs.png'
@@ -43,7 +44,7 @@ const projects = [
         img: '/projects/deskTopWindBnb.png',
         title: 'Windbnb',
         description: 'Servicio de hospedaje, que permite filtrar por localidad y cantidad de invitados',
-        tehc: [
+        tech: [
             {
                 title: 'react',
                 icon: '/icons/react.png'
@@ -75,36 +76,20 @@ export function Projects() {
             </h4>
 
 
+            <ul className='p-1 mt-4  mx-auto gap-5 flex flex-col md:grid md:grid-cols-auto-fit-cards md:max-w-6xl'>
 
-            <div className='p-1 mt-4  mx-auto gap-5 flex flex-col md:grid md:grid-cols-auto-fit-cards md:max-w-6xl'>
-
-                {projects.map(project => (
-                    <a href={project.link} target="_blank">
-                        <div className=' min-w-[340px] max-w-[340px] h-[470px] mx-auto overflow-hidden cursor-pointe shadow-md rounded-2xl pb-4 bg-description-grad'>
-
-                            <Image className='rounded-2xl w-full h-60' src={project.img} alt={project.title} width={800} height={800} />
-
-                            <h3 className='mt-4 text-xl font-semibold text-center  text-blue-950'>
-                                {project.title}
-                            </h3 >
-                            <p className=' text-blue-950 text-justify p-4 italic'>- {project.description}</p>
-
-                            <div className=' grid grid-cols-3 mx-auto gap-y-2'>
-
-                                {project.tehc.map(tech => (
-                                    <Image className='mx-auto' src={tech.icon} width={40} height={40} alt='logo tec' />
-
-                                ))}
-
-
-                            </div>
-
-
-                        </div>
-                    </a>
+                {projects.map((project, i) => (
+                    <ProjectsCard
+                        key={i}
+                        link={project.link}
+                        img={project.img}
+                        title={project.title}
+                        description={project.description}
+                        tech={project.tech}
+                    />
                 ))}
 
-            </div>
+            </ul>
 
         </section>
     )

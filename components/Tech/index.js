@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { TechCard } from "../TechCard";
 
 const technologies = [
     {
@@ -48,22 +49,19 @@ export function Tech() {
 
             </h3>
 
-            <div className='mt-9 max-w-[340px] grid grid-cols-auto-fit-icons w-fit gap-x-4 md:max-w-6xl gap-y-7'>
+            <ul className='mt-9 max-w-[340px] grid grid-cols-auto-fit-icons w-fit gap-x-4 md:max-w-6xl gap-y-7'>
 
-                {technologies.map((tech) => (
-               
-                    <div className={`w-16 h-16 md:w-20 md:h-20 cursor-pointer relative`}>
+                {technologies.map((tech, i) => (
 
-                        <Image className=' w-10 h-10 mx-auto' src={tech.icon} width={256} height={256} alt={tech.title} />
+                    <TechCard
+                        key={i}
+                        icon={tech.icon}
+                        title={tech.title}
+                    />
 
-                    </div>
                 ))}
 
-
-
-
-
-            </div>
+            </ul>
 
         </section>
     )

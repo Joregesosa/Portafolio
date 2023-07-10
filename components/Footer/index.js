@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { ContactCard } from "../ContactCard";
 
 const contacts = [
     {
@@ -27,6 +28,7 @@ const contacts = [
 
 export function Footer() {
     return (
+        
         <footer className=' bg-slate-900 text-gray-300 text-lg font-medium flex flex-col justify-center md:grid md:grid-cols-2 md:h-24'>
 
             <div className='flex flex-col justify-center w-fit mx-auto p-7 gap-3 md:flex-row md:gap-x-9'>
@@ -40,26 +42,21 @@ export function Footer() {
                     <Image className='object-contain' src={'/icons/mail.png'} width={40} height={40} alt='phone icon' />
                     joregesosa@gmail.com
                 </span>
+
             </div>
 
             <ul className='flex md:justify-end md:items-center md:px-10 gap-10 justify-around pb-5 md:pb-0'>
 
                 {contacts.map((contact, i) => (
-                    <li key={i}>
 
-                        <a href={contact.link} target="_blank">
-
-                            <Image className='object-contain' src={contact.icon} width={25} height={25} alt={contact.title} />
-
-                        </a>
-                    </li>
+                    <ContactCard
+                        key={i}
+                        icon={contact.icon}
+                        title={contact.title}
+                        link={contact.link}
+                    />
 
                 ))}
-
-
-
-
-
 
             </ul>
 
