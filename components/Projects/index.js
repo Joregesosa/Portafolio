@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { ProjectsCard } from "../ProjectCard";
 
 const projects = [
@@ -57,13 +56,30 @@ const projects = [
         link: 'https://joregesosa.github.io/windbnb_challenge/'
 
     },
+    {
+        img: '/projects/DesktopToDo.png',
+        title: 'Windbnb',
+        description: 'Todo List es una aplicacion que te permite crear y manejar una lista de tareas.',
+        tech: [
+            {
+                title: 'react',
+                icon: '/icons/react.png'
+            },
+            {
+                title: 'css',
+                icon: '/icons/css.png'
+            },
+        ],
+        link: 'https://joregesosa.github.io/todo_list/'
+
+    },
 
 ]
 
 export function Projects() {
 
     return (
-        <section className=' min-h-screen md:min-h-0 w-full p-6'>
+        <section id="projects" className=' min-h-screen md:min-h-0 w-full p-6 md:px-6 md:py-24 '>
 
             <h3 className=' text-3xl font-semibold text-blue-950 max-w-[340px] mx-auto md:max-w-6xl md:px-4'>
 
@@ -79,6 +95,7 @@ export function Projects() {
             <ul className='p-1 mt-4  mx-auto gap-5 flex flex-col md:grid md:grid-cols-auto-fit-cards md:max-w-6xl'>
 
                 {projects.map((project, i) => (
+
                     <ProjectsCard
                         key={i}
                         link={project.link}
@@ -87,6 +104,7 @@ export function Projects() {
                         description={project.description}
                         tech={project.tech}
                     />
+
                 ))}
 
             </ul>

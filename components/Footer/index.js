@@ -29,7 +29,7 @@ const contacts = [
 export function Footer() {
     return (
         
-        <footer className=' bg-slate-900 text-gray-300 text-lg font-medium flex flex-col justify-center md:grid md:grid-cols-2 md:h-24'>
+        <footer id="contacts" className=' bg-slate-900 text-gray-300 text-lg font-medium flex flex-col justify-center md:grid md:grid-cols-2 md:h-24'>
 
             <div className='flex flex-col justify-center w-fit mx-auto p-7 gap-3 md:flex-row md:gap-x-9'>
 

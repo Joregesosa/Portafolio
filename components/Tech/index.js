@@ -45,9 +45,9 @@ const technologies = [
 
 export function Tech() {
     return (
-        <section className='flex flex-col p-8 items-center'>
+        <section id="tech" className='flex flex-col p-8 items-center md:px-6 md:py-24'>
 
-            <h3 className=' text-3xl font-semibold text-blue-950'>
+            <h3 className=' text-2xl md:text-3xl font-semibold text-blue-950'>
 
                 Tecnologías & Frameworks
 
