@@ -43,11 +43,11 @@ export function Nav() {
 
                     </Link>
 
-                    <a href="#contacts" className="-m-1.5 p-1.5 hover:text-gray-400">
+                    <Link href="#contacts" className="-m-1.5 p-1.5 hover:text-gray-400">
 
                         CONTACTS
 
-                    </a>
+                    </Link>
 
 
                 </ul>
